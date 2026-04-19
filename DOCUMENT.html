@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hacked 😈</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: black;
+            color: #00ff00;
+            font-family: monospace;
+            text-align: center;
+            padding: 20px;
+        }
+        .box {
+            border: 2px solid #00ff00;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 12px;
+            background: red;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        img {
+            width: 80%;
+            max-width: 300px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>⚠ SYSTEM HACK IN PROGRESS ⚠</h2>
+    <p id="line">Initializing hack...</p>
+    <p id="progress">0%</p>
+
+    <button onclick="stopHack()">STOP IT 😭</button>
+
+    <p id="final" style="display:none;"></p>
+    <img id="meme" style="display:none;" src="">
+</div>
+
+<audio id="sound" src="https://www.soundjay.com/button/beep-07.wav"></audio>
+
+<script>
+let percent = 0;
+
+let messages = [
+    "Accessing gallery 📸...",
+    "Reading WhatsApp chats 💬...",
+    "Sending message to your crush 😳...",
+    "Deleting homework 📝...",
+    "Uploading memes to internet 😂...",
+    "Tracking location 📍...",
+    "Calling your mom ☎..."
+];
+
+let i = 0;
+
+let interval = setInterval(() => {
+    percent += 10;
+    document.getElementById("progress").innerText = percent + "%";
+
+    if (i < messages.length) {
+        document.getElementById("line").innerText = messages[i];
+        i++;
+    }
+
+    document.getElementById("sound").play();
+
+    if (percent >= 100) {
+        clearInterval(interval);
+        document.getElementById("line").innerText = "FINALIZING...";
+    }
+}, 800);
+
+function stopHack() {
+    document.getElementById("final").style.display = "block";
+    document.getElementById("meme").style.display = "block";
+
+    document.getElementById("final").innerHTML =
+        "😂 GOTCHA DA! இது prank தான்!<br><br>💀 உன் secret: Too much reels பார்த்துட்டே இருக்க!";
+
+    document.getElementById("meme").src =
+        "https://i.imgflip.com/30b1gx.jpg"; // funny meme
+}
+</script>
+
+</body>
+</html>
